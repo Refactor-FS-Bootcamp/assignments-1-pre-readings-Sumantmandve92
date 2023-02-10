@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>palindrome String</title>
+    <script>
+function palString(str)
+{
+    let s1="";
+    for(let i of str)
+    {
+        s1=i+s1;
+    }
+    if(s1==str)
+    {
+        alert(str+" is palindrome string");
+    }
+    else
+    {
+        alert(str+" is not palindrome string");
+    }
+}
+
+
+    </script>
+</head>
+<body>
+    chaeck String palindrome : <input type="text" id="pal">
+    <button onclick=" palString(pal.value)">check</button>
+</body>
+</html>
