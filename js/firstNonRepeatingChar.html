@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first non repeating char in string</title>
+    <script>
+
+function diffArray(str) {
+  
+  let found=-1;
+  for(let i=0;i<str.length;i++)
+  {
+    let left=0;
+    let right=0;
+    for(let j=0;j<str.length;j++)
+    {
+      if(str[i]==str[j] && j<i)
+      {
+        left++;
+        break;
+      }
+      else if(str[i]==str[j] && j>i)
+      {
+        right++;
+        break;
+      }
+    }
+    if(left==0 && right==0)
+    {
+      found=i;
+      break;
+    }
+
+  }
+  if(found!=-1)
+  {
+    return str[found];
+  }
+  else
+  {
+    return "not found";
+  }
+
+  
+}
+
+console.log(diffArray("abcdcdeea"));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
