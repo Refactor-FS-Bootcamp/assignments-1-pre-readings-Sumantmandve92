@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="contact">
+        <div class="mobileno">Want To join</div>
+        <div class="message">Be a part of our community</div>
+        <div class="btn">join now</div>
+    </div>
+    <div class="contactForm">
+        <fieldset >
+
+            <form #contactForm="ngForm" >
+                <label for="fullname">Your Name </label>
+                <input type="text" placeholder="Enter your full name" ngModel name="fullname">
+                <label for="mail">Email </label>
+                <input type="email" placeholder="Enter your email" ngModel name="mail">
+                <label for="mobileno">Mobile No. </label>
+                <input type="number" placeholder="Enter your mobile number" ngModel name="mobileno">
+                <label for="country">Country </label>
+                <input type="text" placeholder="Enter your country" ngModel name="country">
+                <label for="query">Your Query </label>
+
+                <textarea ngModel name="query" id="query" cols="30" rows="10"></textarea>
+                <div class="btn" (click)="contact(contactForm.value)">Submit</div>
+            </form>
+        </fieldset>
+    </div>
+</div>
